@@ -1,13 +1,6 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import WaitlistLanding from '../pages/WaitlistLanding.jsx';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes.jsx';
 import ToastViewport from '../components/ui/Toast.jsx';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <WaitlistLanding />,
-  },
-]);
 
 export default function App() {
   return (

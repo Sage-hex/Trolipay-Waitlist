@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import { dismissToast, subscribeToToasts } from './toastStore.js';
 
 const TYPE_STYLES = {
-  info: 'border-brand-500/40 bg-surface-elevated text-content',
-  success: 'border-success/40 bg-surface-elevated text-content',
-  warning: 'border-warning/40 bg-surface-elevated text-content',
-  error: 'border-danger/40 bg-surface-elevated text-content',
+  info: 'border-border bg-card-bg text-text',
+  success: 'border-brand-accent/40 bg-card-bg text-text',
+  warning: 'border-yellow-400/40 bg-card-bg text-text',
+  error: 'border-red-400/40 bg-card-bg text-text',
 };
 
 export default function ToastViewport() {
@@ -18,7 +18,7 @@ export default function ToastViewport() {
       {toasts.map((toast) => (
         <div
           key={toast.id}
-          className={`pointer-events-auto rounded-lg border px-4 py-3 shadow-soft ${TYPE_STYLES[toast.type] ?? TYPE_STYLES.info}`}
+          className={`pointer-events-auto rounded-xl border px-4 py-3 shadow-sm ${TYPE_STYLES[toast.type] ?? TYPE_STYLES.info}`}
           role="status"
           aria-live="polite"
         >
@@ -27,7 +27,7 @@ export default function ToastViewport() {
             <button
               type="button"
               onClick={() => dismissToast(toast.id)}
-              className="rounded-sm px-1 text-content-muted transition hover:text-content"
+              className="rounded-sm px-1 text-text-muted transition hover:text-text"
               aria-label="Dismiss notification"
             >
               ×
