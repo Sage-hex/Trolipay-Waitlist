@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "SF Pro Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --color-brand-primary: #3f57f6;
+  --color-brand-accent: #5b72ff;
+  --color-app-bg: #050816;
+  --color-card-bg: #0a1022;
+  --color-border: #1a2544;
+  --color-text: #f4f7ff;
+  --color-text-muted: #b8c2dd;
+
+  --radius-xl: 1rem;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-app-bg);
+  color: var(--color-text);
+}
